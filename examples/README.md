@@ -195,3 +195,10 @@ For example:
 
 ```js
 .create('my_modpack:vacuum_freezer')
+```
+
+## API documentation
+
+For the complete KubeJS API reference, see:
+
+[`../docs/KUBEJS_API.md`](../docs/KUBEJS_API.md)
