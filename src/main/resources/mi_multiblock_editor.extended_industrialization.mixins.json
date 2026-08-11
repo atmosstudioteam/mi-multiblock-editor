@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.atmos_studio.mimultiblockeditor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "compat.extended_industrialization.farmer.FarmerAdapterResolverMixin",
+    "compat.extended_industrialization.farmer.FarmerVariantOrdererMixin",
+    "compat.extended_industrialization.farmer.FarmerShapeCompilerMixin",
+    "compat.extended_industrialization.farmer.FarmerBlockEntityMixin",
+
+    "compat.extended_industrialization.large_electric_furnace.LargeElectricFurnaceVariantOrdererMixin",
+
+    "compat.extended_industrialization.tesla_tower.TeslaTowerAdapterResolverMixin",
+    "compat.extended_industrialization.tesla_tower.TeslaTowerVariantOrdererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

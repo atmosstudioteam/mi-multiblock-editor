@@ -1,0 +1,67 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/atmosstudioteam/mi-multiblock-editor/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="Atmos Studio"
+displayURL="https://github.com/atmosstudioteam/mi-multiblock-editor"
+
+logoFile="mi_multiblock_editor.png"
+logoBlur=false
+
+description='''
+A KubeJS-based multiblock structure editor for Modern Industrialization.
+
+Allows modpack developers to replace existing Modern Industrialization multiblock structures from KubeJS startup scripts, including support for special MI multiblocks and compatible addon machines.
+'''
+
+# Core Modern Industrialization mixins.
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+# Extended Industrialization compatibility.
+[[mixins]]
+config="${mod_id}.extended_industrialization.mixins.json"
+requiredMods=["extended_industrialization"]
+
+# Industrialization Overdrive compatibility.
+[[mixins]]
+config="${mod_id}.industrialization_overdrive.mixins.json"
+requiredMods=["industrialization_overdrive"]
+
+# Yet Another Industrialization compatibility.
+[[mixins]]
+config="${mod_id}.yet_another_industrialization.mixins.json"
+requiredMods=["yet_another_industrialization"]
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[${neo_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="modern_industrialization"
+type="required"
+versionRange="[2.5.5,2.6)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="kubejs"
+type="required"
+versionRange="[2101.7.2,)"
+ordering="AFTER"
+side="BOTH"

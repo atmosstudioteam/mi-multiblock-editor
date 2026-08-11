@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.atmos_studio.mimultiblockeditor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "compat.yet_another_industrialization.arboreous_greenhouse.ArboreousGreenhouseVariantOrdererMixin",
+    "compat.yet_another_industrialization.arboreous_greenhouse.ArboreousGreenhouseShapeCompilerMixin",
+    "compat.yet_another_industrialization.arboreous_greenhouse.ArboreousGreenhouseBlockEntityMixin",
+
+    "compat.yet_another_industrialization.flight_pylon.FlightPylonAdapterResolverMixin",
+    "compat.yet_another_industrialization.flight_pylon.FlightPylonVariantOrdererMixin",
+    "compat.yet_another_industrialization.flight_pylon.FlightPylonBlockEntityMixin",
+
+    "compat.yet_another_industrialization.large_storage_unit.LargeStorageUnitAdapterResolverMixin",
+    "compat.yet_another_industrialization.large_storage_unit.LargeStorageUnitVariantOrdererMixin",
+    "compat.yet_another_industrialization.large_storage_unit.LargeStorageUnitBlockEntityMixin",
+
+    "compat.yet_another_industrialization.nuclear_rod_irradiator.NuclearRodIrradiatorAdapterResolverMixin",
+    "compat.yet_another_industrialization.nuclear_rod_irradiator.NuclearRodIrradiatorVariantOrdererMixin",
+    "compat.yet_another_industrialization.nuclear_rod_irradiator.NuclearRodIrradiatorBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

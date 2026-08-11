@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.artem.mimultiblockeditor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ActiveShapeComponentAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

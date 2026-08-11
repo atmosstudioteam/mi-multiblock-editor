@@ -1,0 +1,1 @@
+dev.atmos_studio.mimultiblockeditor.kubejs.MIMultiblockKubeJSPlugin

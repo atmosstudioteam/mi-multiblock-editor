@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.atmos_studio.mimultiblockeditor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ActiveShapeComponentAccessor",
+    "AbstractCraftingMultiblockBlockEntityMixin",
+    "GeneratorMultiblockBlockEntityMixin",
+    "TesseractBasicMultiblockBlockEntityMixin",
+
+    "ElectricBlastFurnaceBlockEntityMixin",
+    "SteamBoilerMultiblockBlockEntityMixin",
+    "DistillationTowerBlockEntityMixin",
+    "LargeTankMultiblockBlockEntityMixin",
+    "NuclearReactorMultiblockBlockEntityMixin"
+  ],
+  "client": [
+    "client.MultiblockCategoryMixin",
+    "client.IngredientCountMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
