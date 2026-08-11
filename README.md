@@ -54,6 +54,22 @@ MIMultiblocks
 
 `MIMultiblocks` is available only in **KubeJS startup scripts**, so structure changes require a full game restart.
 
+## Examples
+
+Complete, working KubeJS examples are available in:
+
+[`examples/README.md`](examples/README.md)
+
+The examples include standard Modern Industrialization machines as well as special multiblocks that require multiple structure forms or stable `.variant(...)` keys.
+
+Dedicated examples are also provided for supported machines from:
+
+- Extended Industrialization
+- Industrialization Overdrive
+- Yet Another Industrialization
+
+The example scripts use the neutral `example:` namespace. Replace it with the namespace used by your own modpack or project.
+
 ## Structure coordinates
 
 For every `.layer([...])` call:
@@ -69,8 +85,6 @@ Every structure must contain exactly one `#`, all layers must have the same dime
 ## KubeJS API
 
 The complete API reference is in [`docs/KUBEJS_API.md`](docs/KUBEJS_API.md).
-
-Examples are available in [`examples/`](examples/).
 
 ## Special compatibility
 

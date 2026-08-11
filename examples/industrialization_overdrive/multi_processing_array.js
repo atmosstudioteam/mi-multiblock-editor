@@ -1,0 +1,155 @@
+(function registerIndustrializationOverdriveMultiProcessingArray() {
+    const CONTROLLER_ID =
+        'industrialization_overdrive:multi_processing_array';
+
+    const SOLID_TITANIUM_CASING_ID =
+        'modern_industrialization:solid_titanium_machine_casing';
+
+    const TITANIUM_PIPE_ID =
+        'modern_industrialization:titanium_machine_casing_pipe';
+
+    const SHAPES = [
+        {
+            id: 'example:multi_processing_array_8',
+            depth: 3,
+            machines: 8
+        },
+        {
+            id: 'example:multi_processing_array_16',
+            depth: 5,
+            machines: 16
+        },
+        {
+            id: 'example:multi_processing_array_32',
+            depth: 7,
+            machines: 32
+        },
+        {
+            id: 'example:multi_processing_array_64',
+            depth: 9,
+            machines: 64
+        }
+    ];
+
+    function repeatRows(count, row) {
+        const rows = [];
+
+        for (let index = 0; index < count; index++) {
+            rows.push(row);
+        }
+
+        return rows;
+    }
+
+    function createBottomLayer(depth) {
+        const rows = repeatRows(
+            depth - 1,
+            'OOO'
+        );
+
+        rows.push('EEE');
+
+        return rows;
+    }
+
+    function createMiddleLayer(depth) {
+        const rows = repeatRows(
+            depth - 1,
+            'GPG'
+        );
+
+        rows.push('G#G');
+
+        return rows;
+    }
+
+    function createTopLayer(depth) {
+        const rows = repeatRows(
+            depth - 1,
+            'III'
+        );
+
+        rows.push('EEE');
+
+        return rows;
+    }
+
+    function registerShape(shape) {
+        MIMultiblocks
+            .create(shape.id)
+            .requiresMod(
+                'industrialization_overdrive'
+            )
+            .controller(
+                CONTROLLER_ID
+            )
+            .hatchCasing(
+                SOLID_TITANIUM_CASING_ID
+            )
+
+            .layer(
+                createBottomLayer(
+                    shape.depth
+                )
+            )
+
+            .layer(
+                createMiddleLayer(
+                    shape.depth
+                )
+            )
+
+            .layer(
+                createTopLayer(
+                    shape.depth
+                )
+            )
+
+            .mappingBlock(
+                'I',
+                SOLID_TITANIUM_CASING_ID,
+                [
+                    'modern_industrialization:item_input',
+                    'modern_industrialization:fluid_input'
+                ]
+            )
+
+            .mappingBlock(
+                'O',
+                SOLID_TITANIUM_CASING_ID,
+                [
+                    'modern_industrialization:item_output',
+                    'modern_industrialization:fluid_output'
+                ]
+            )
+
+            .mappingBlock(
+                'E',
+                SOLID_TITANIUM_CASING_ID,
+                [
+                    'modern_industrialization:energy_input'
+                ]
+            )
+
+            .mappingBlock(
+                'P',
+                TITANIUM_PIPE_ID,
+                []
+            )
+
+            .mappingTag(
+                'G',
+                'c:glass_blocks',
+                'minecraft:glass',
+                []
+            )
+
+            .register();
+
+    }
+
+    for (const shape of SHAPES) {
+        registerShape(shape);
+    }
+
+})();
